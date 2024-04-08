@@ -12,6 +12,7 @@ import subprocess
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'youtube-transcript-api'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pytube'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'chardet'])
 
 # prompt: With pytube create a function that has as input a URL and then outputs the YouTube video ID
 
