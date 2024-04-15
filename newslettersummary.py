@@ -12,6 +12,10 @@ import subprocess
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-api-python-client'])
 
+# Get the URL, text file name, and video ID from the command line arguments.
+query = sys.argv[1]
+
+
 # import the required libraries
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -111,4 +115,4 @@ def collect_emails(query):
           file.write("-" * 80 + "\n")  # Separator line
   return file
 
-collect_emails('label:Newsletters after:2024/04/12')
+collect_emails(query)
