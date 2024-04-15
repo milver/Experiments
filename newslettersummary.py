@@ -12,7 +12,7 @@ import subprocess
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-api-python-client'])
 
-# Get the URL, text file name, and video ID from the command line arguments.
+# Get the query string from the command line arguments.
 query = sys.argv[1]
 
 
