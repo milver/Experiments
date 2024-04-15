@@ -7,6 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1fxlD4T9yU7dekEwpJ7bK3DDuzGgXgVnu
 """
 
+import sys
+import subprocess
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-api-python-client'])
+
 # import the required libraries
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
