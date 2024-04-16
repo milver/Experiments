@@ -11,6 +11,8 @@ import sys
 import subprocess
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-api-python-client'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-auth-httplib2'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-auth-oauthlib'])
 
 # Get the query string from the command line arguments.
 query = sys.argv[1]
