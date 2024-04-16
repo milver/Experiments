@@ -13,7 +13,7 @@ import subprocess
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-api-python-client'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-auth-httplib2'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'google-auth-oauthlib'])
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'beautifulsoup4'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'bs4'])
 
 # Get the query string from the command line arguments.
 query = sys.argv[1]
