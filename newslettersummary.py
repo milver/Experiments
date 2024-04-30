@@ -41,7 +41,7 @@ if os.path.exists('token.pickle'):
 	# Read the token from the file and store it in the variable creds
 	with open('token.pickle', 'rb') as token:
 		creds = pickle.load(token)
-        creds.refresh(Request())
+		creds.refresh(Request())
     except google.auth.exceptions.RefreshError as error:
         # if refresh token fails, reset creds to none.
         creds = None
