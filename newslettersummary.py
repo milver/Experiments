@@ -39,9 +39,9 @@ creds = None
 if os.path.exists('token.pickle'):
     try:
 	# Read the token from the file and store it in the variable creds
-	with open('token.pickle', 'rb') as token:
-		creds = pickle.load(token)
-		creds.refresh(Request())
+        with open('token.pickle', 'rb') as token:
+            creds = pickle.load(token)
+            creds.refresh(Request())
     except google.auth.exceptions.RefreshError as error:
         # if refresh token fails, reset creds to none.
         creds = None
@@ -54,8 +54,8 @@ if not creds or not creds.valid:
         flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
         creds = flow.run_local_server(port=0)
 	# Save the access token in token.pickle file for the next run
-	with open('token.pickle', 'wb') as token:
-	pickle.dump(creds, token)
+    with open('token.pickle', 'wb') as token:
+    pickle.dump(creds, token)
 
 from inspect import formatannotationrelativeto
 import base64
